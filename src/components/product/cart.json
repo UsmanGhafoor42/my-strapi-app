@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_product_carts",
+  "info": {
+    "displayName": "Cart",
+    "icon": "shoppingCart"
+  },
+  "options": {},
+  "attributes": {}
+}
