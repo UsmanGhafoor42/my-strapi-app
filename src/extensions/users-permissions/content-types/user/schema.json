@@ -68,14 +68,8 @@
     "Cart": {
       "displayName": "Cart",
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "product.cart"
-    },
-    "products": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::product.product",
-      "mappedBy": "user"
     }
   }
 }

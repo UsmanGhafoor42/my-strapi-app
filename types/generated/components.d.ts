@@ -5,8 +5,11 @@ export interface ProductCart extends Struct.ComponentSchema {
   info: {
     displayName: 'Cart';
     icon: 'shoppingCart';
+    description: '';
   };
-  attributes: {};
+  attributes: {
+    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
+  };
 }
 
 declare module '@strapi/strapi' {

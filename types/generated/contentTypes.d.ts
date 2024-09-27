@@ -18,10 +18,6 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       true
     >;
     Price: Schema.Attribute.Integer;
-    user: Schema.Attribute.Relation<
-      'manyToOne',
-      'plugin::users-permissions.user'
-    >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -506,8 +502,7 @@ export interface PluginUsersPermissionsUser
       'manyToOne',
       'plugin::users-permissions.role'
     >;
-    Cart: Schema.Attribute.Component<'product.cart', false>;
-    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
+    Cart: Schema.Attribute.Component<'product.cart', true>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
